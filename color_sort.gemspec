@@ -8,8 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = ColorSort::VERSION
   spec.authors       = ["Pip Taylor"]
   spec.email         = ["pip@evilgeek.co.uk"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{Sorts colors perceptually}
   spec.homepage      = ""
   spec.license       = "MIT"
 
