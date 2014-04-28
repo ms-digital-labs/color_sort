@@ -5,5 +5,7 @@ require "color_sort/color_space_converter"
 require "color_sort/sorter"
 
 module ColorSort
-  # Your code goes here...
+  def self.sort(colors)
+    Sorter.new(colors).sorted
+  end
 end
