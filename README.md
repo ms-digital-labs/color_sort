@@ -1,6 +1,8 @@
 # ColorSort
 
-TODO: Write a gem description
+ColorSort sorts an array of colors perceptually, using the
+[CIEDE2000](http://en.wikipedia.org/wiki/Color_difference#CIEDE2000)
+color distance function.
 
 ## Installation
 
