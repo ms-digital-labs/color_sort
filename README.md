@@ -67,7 +67,7 @@ Number of colors | Time (seconds)
 
 ## A note on naming
 
-This gem was authored in the UK, where color is usually spelt colour. However, this gem depends on two others (`color` and `colorspace`) that spell it without the u, so for the sake of consistency it's spelt as color in this gem too.
+This gem was authored in the UK, where color is usually spelt colour. However, this gem depends on two others ([color](http://color.rubyforge.org/) and [colorscore](https://github.com/quadule/colorscore)) that spell it without the u, so for the sake of consistency it's spelt as color in this gem too.
 
 ## Contributing
 
