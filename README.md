@@ -45,7 +45,7 @@ This turns out to be the [Travelling salesman problem](http://en.wikipedia.org/w
 
 Next we tried [Simulated annealing](http://en.wikipedia.org/wiki/Simulated_annealing), but found that it didn't converge on a solution anywhere near quickly enough to be useful.
 
-The solution we settle on was to iteratively build of a list of colors, inserting each one in to the list at the point at which it causes the lowest increase in the total distance between all the colors currently in the list. This allows us to sort a few hundred colors in a couple of seconds, and produces visually pleasing results.
+The solution we settled on was to iteratively build of a list of colors, inserting each one in to the list at the point at which it causes the lowest increase in the total distance between all the colors currently in the list. This allows us to sort a few hundred colors in a couple of seconds, and produces visually pleasing results.
 
 #### Other approaches
 
