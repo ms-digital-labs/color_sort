@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Pip Taylor"]
   spec.email         = ["pip@evilgeek.co.uk"]
   spec.summary       = %q{Sorts colors perceptually}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/ms-digital-labs/color_sort"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
