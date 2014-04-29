@@ -24,7 +24,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Call `ColorSort.sort` with an array of RGB colors in hex form (with or without preceeding #):
+
+```ruby
+unsorted_colors = ["35c047", "7f40ed", "39ae1e", "5f9d4c", "94ec1e", "93e482"]
+
+sorted_colors = ColorSort.sort(unsorted_colors)
+	# => ["94ec1e", "93e482", "39ae1e", "35c047", "5f9d4c", "7f40ed"]
+```
 
 ## Contributing
 
