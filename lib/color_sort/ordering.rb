@@ -4,16 +4,27 @@ module ColorSort
   class Ordering
     attr_reader :colors
 
-    def initialize
+    def initialize(start: nil, finish: nil)
       @colors = []
+      @start = start
+      @finish = finish
+      colors << start unless start.nil?
+      colors << finish unless finish.nil?
     end
 
     def add_lab_color(color)
       if colors.size < 2
-        colors << color
+        if finish.nil?
+          colors << color
+        else
+          colors.unshift(color)
+        end
       else
-        min_delta = distance(color, colors.first)
         min_delta_index = 0
+        min_delta = 1_000_000
+        if start.nil?
+          min_delta = distance(color, colors.first)
+        end
 
         (1...colors.size).each do |i|
           remove_distance = distance(colors[i-1], colors[i])
@@ -25,7 +36,7 @@ module ColorSort
           end
         end
 
-        if distance(colors.last, color) < min_delta
+        if finish.nil? && distance(colors.last, color) < min_delta
           min_delta_index = colors.size
         end
 
@@ -34,6 +45,8 @@ module ColorSort
     end
 
   private
+    attr_reader :start, :finish
+
     def distance(color_a, color_b)
       ColorSort::Distance.ciede2000(color_a, color_b)
     end

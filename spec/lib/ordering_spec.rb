@@ -64,6 +64,38 @@ describe ColorSort::Ordering do
         end
       end
     end
+
+    context "with a fixed start color" do
+      subject { ColorSort::Ordering.new(start: blue) }
+
+      it "doesn't add color at the start, even if it minimises total distance" do
+        subject.add_lab_color(green)
+        subject.add_lab_color(red)
+
+        expect(subject.colors).to eq([blue, red, green])
+      end
+    end
+
+    context "with a fixed finish color" do
+      subject { ColorSort::Ordering.new(finish: blue) }
+
+      it "doesn't add color at end, even if it minimises total distance" do
+        subject.add_lab_color(green)
+        subject.add_lab_color(red)
+
+        expect(subject.colors).to eq([green, red, blue])
+      end
+    end
+
+    context "with fixed start and finish colors" do
+      subject { ColorSort::Ordering.new(start: red, finish: blue) }
+
+      it "doesn't add color at start or end, even if it minimises total distance" do
+        subject.add_lab_color(green)
+
+        expect(subject.colors).to eq([red, green, blue])
+      end
+    end
   end
 
   def set_distance(color_a, color_b, distance)
