@@ -9,15 +9,21 @@ RSpec.configure do |config|
     let(:red) { double(:red) }
     let(:green) { double(:green) }
     let(:blue) { double(:blue) }
+    let(:yellow) { double(:yellow) }
 
     before do
       set_distance(red, red, 0)
       set_distance(green, green, 0)
       set_distance(blue, blue, 0)
+      set_distance(yellow, yellow, 0)
 
       set_distance(red, blue, 1)
       set_distance(blue, green, 2)
       set_distance(red, green, 3)
+
+      set_distance(yellow, red, 4)
+      set_distance(yellow, green, 5)
+      set_distance(yellow, blue, 6)
     end
 
     def set_distance(color_a, color_b, distance)
