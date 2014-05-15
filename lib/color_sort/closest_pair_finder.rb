@@ -5,6 +5,10 @@ module ColorSort
       @group_b = group_b
     end
 
+    def self.pair(*args)
+      new(*args).pair
+    end
+
     def pair
       shortest_distance = 1_000_000
       closest_pair = nil
