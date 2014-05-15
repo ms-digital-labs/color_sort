@@ -3,6 +3,8 @@ require 'color_sort'
 require "rspec/radar"
 
 RSpec.configure do |config|
+  config.treat_symbols_as_metadata_keys_with_true_values = true
+
   shared_context "with color doubles", :color_doubles do
     let(:red) { double(:red) }
     let(:green) { double(:green) }
