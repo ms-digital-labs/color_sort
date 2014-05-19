@@ -17,7 +17,7 @@ describe ColorSort::GroupedSort, :color_doubles do
     let(:expected_f) { [] }
 
     it "works" do
-      grouped_sort = ColorSort::GroupedSort.new(
+      grouped_sort = ColorSort::Grouped::GroupList.new(
         [group_a, group_b, group_c, group_d, group_e, group_f]
       )
 

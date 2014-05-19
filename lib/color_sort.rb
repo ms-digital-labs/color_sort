@@ -6,6 +6,7 @@ require "color_sort/group_sorter"
 require "color_sort/distance"
 require "color_sort/color_space_converter"
 require "color_sort/sorter"
+require "color_sort/grouped"
 
 module ColorSort
   def self.sort(colors)
