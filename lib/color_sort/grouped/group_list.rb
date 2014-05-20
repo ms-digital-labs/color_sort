@@ -3,7 +3,7 @@ module ColorSort
     class GroupList
       def initialize(initial_groups)
         @groups = initial_groups.map { |items| initialize_group(items) }
-        groups.each_cons(2) do |group_a, group_b|
+        groups.reject(&:empty?).each_cons(2) do |group_a, group_b|
           group_a.next_group = group_b
           group_b.previous_group = group_a
         end

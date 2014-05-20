@@ -24,6 +24,10 @@ module ColorSort
         remaining.delete_at(result.index(start_color)) unless start_color.nil?
       end
 
+      def empty?
+        items.empty?
+      end
+
     protected
       attr_reader :items
     end
