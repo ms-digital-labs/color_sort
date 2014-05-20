@@ -33,6 +33,19 @@ sorted_colors = ColorSort.sort(unsorted_colors)
 	# => ["94ec1e", "93e482", "39ae1e", "35c047", "5f9d4c", "7f40ed"]
 ```
 
+You can also sort multiple groups of colors with
+`ColorSort.sort_groups`. This will leave the groups in the order
+originally given, but will sort the colors within the groups. It will
+also order them such that the last color in a group and the first color in
+the next group are as close as possible.
+
+```ruby
+unsorted_colors = [["35c047", "7f40ed"], ["39ae1e"], ["5f9d4c", "94ec1e", "93e482"]]
+
+sorted_colors = ColorSort.sort_groups(unsorted_colors)
+	# => [["7f40ed", "35c047"], ["39ae1e"], ["5f9d4c", "93e482", "94ec1e"]]
+```
+
 ## How it works
 
 Often when dealing with colors on computers, we're working with the [RGB color model](http://en.wikipedia.org/wiki/Color_model#RGB_color_model). As each color has three components, we can think of it as a point in 3D space. This allows us to use the [Euclidean distance](http://en.wikipedia.org/wiki/Euclidean_distance) to see how far apart two colors are.
