@@ -5,7 +5,7 @@ module ColorSort
     end
 
     def sorted
-      GroupedSort.new(lab_groups).sorted.map { |group|
+      Grouped::GroupList.new(lab_groups).sorted.map { |group|
         group.map { |lab_color|
           color_map[lab_color]
         }

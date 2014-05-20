@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe ColorSort::GroupedSort, :color_doubles do
+describe ColorSort::Grouped::GroupList, :color_doubles do
   describe "#sorted" do
     let(:group_a) { [red, green, blue, yellow] }
     let(:group_b) { [yellow] }
@@ -16,8 +16,8 @@ describe ColorSort::GroupedSort, :color_doubles do
     let(:expected_e) { [blue, red, yellow] }
     let(:expected_f) { [] }
 
-    it "works" do
-      grouped_sort = ColorSort::GroupedSort.new(
+    it "sorts the colors within their groups" do
+      grouped_sort = ColorSort::Grouped::GroupList.new(
         [group_a, group_b, group_c, group_d, group_e, group_f]
       )
 
